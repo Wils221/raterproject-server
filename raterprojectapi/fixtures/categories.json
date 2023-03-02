@@ -1,0 +1,24 @@
+[
+    {
+        "model": "raterprojectapi.gamer",
+        "pk": 1,
+        "fields": {
+            "label": "RPG"
+                    }
+    },
+    {
+        "model": "raterprojectapi.gamer",
+        "pk": 2,
+        "fields": {
+            "label": "Shooter"
+                    }
+    },
+    {
+        "model": "raterprojectapi.gamer",
+        "pk": 3,
+        "fields": {
+            "label": "Sports"
+                    }
+    }
+
+]

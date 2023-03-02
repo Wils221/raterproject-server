@@ -1,0 +1,13 @@
+[
+    {
+        "model": "raterprojectapi.event",
+        "pk": 1,
+        "fields": {
+            "gamer": 1,
+            "game": "",
+            "rating": 9,
+            "date_created": "12-20-2023"
+            
+        }
+    }
+]

@@ -1,0 +1,24 @@
+[
+    {
+        "model": "raterprojectapi.game",
+        "pk": 1,
+        "fields": {
+            "title": "Civ 5",
+            "description": "Hours of entertainment, lose years of your life out smarting the AI, none of your friends will play this with you",
+            "release_date": "2011-06-11",
+            "gamer":1
+            
+        }
+    },
+    {
+        "model": "raterprojectapi.game",
+        "pk": 2,
+        "fields": {
+            "title": "Papers Please!",
+            "description": "Congratulations.  The October Labor Lottery is complete. Your name was pulled.",
+            "release_date": "2017-03-03",
+            "gamer": 1
+
+        }
+    }
+]
