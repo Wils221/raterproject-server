@@ -1,0 +1,11 @@
+[
+    {
+        "model": "raterprojectapi.event",
+        "pk": 1,
+        "fields": {
+            "gamer": 1,
+            "game": 2,
+            "photo": ""
+        }
+    }
+]
