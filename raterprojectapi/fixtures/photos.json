@@ -1,6 +1,6 @@
 [
     {
-        "model": "raterprojectapi.event",
+        "model": "raterprojectapi.photo",
         "pk": 1,
         "fields": {
             "gamer": 1,

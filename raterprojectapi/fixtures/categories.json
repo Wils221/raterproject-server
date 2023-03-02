@@ -1,20 +1,20 @@
 [
     {
-        "model": "raterprojectapi.gamer",
+        "model": "raterprojectapi.category",
         "pk": 1,
         "fields": {
             "label": "RPG"
                     }
     },
     {
-        "model": "raterprojectapi.gamer",
+        "model": "raterprojectapi.category",
         "pk": 2,
         "fields": {
             "label": "Shooter"
                     }
     },
     {
-        "model": "raterprojectapi.gamer",
+        "model": "raterprojectapi.category",
         "pk": 3,
         "fields": {
             "label": "Sports"
