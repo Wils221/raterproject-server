@@ -7,4 +7,5 @@ class Rating(models.Model):
     gamer = models.ForeignKey("gamer", on_delete=models.CASCADE)
     game = models.ForeignKey("game", on_delete=models.CASCADE)
     rating = models.IntegerField(validators=[MaxValueValidator(10)])
-    date_created = models.DateField(null=True, blank=True, auto_now=True, auto_now_add=True)
+    review = models.CharField(max_length=500)
+    date_created = models.DateField(null=True, blank=True, auto_now_add=True)
