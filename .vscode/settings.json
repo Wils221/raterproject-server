@@ -1,4 +1,8 @@
 {
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+        "--django-settings-module=<folder name>.settings",
+    ],
     "python.formatting.autopep8Path": "/Users/wil/Library/Python/3.9/bin/autopep8",
 "python.linting.pylintEnabled": true,
 "python.analysis.diagnosticSeverityOverrides": {
