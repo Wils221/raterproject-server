@@ -45,7 +45,7 @@ class GameView(ViewSet):
         game.description = request.data["description"]
         game.release_date = request.data["release_date"]
 
-        gamer = Gamer.objects.get(pk=request.data["organizer"])
+        gamer = Gamer.objects.get(pk=request.data["gamer"])
         game.gamer = gamer
 
         game.save()
