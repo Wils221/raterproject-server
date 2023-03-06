@@ -4,9 +4,10 @@
         "pk": 1,
         "fields": {
             "gamer": 1,
-            "game": "",
+            "game": 1,
             "rating": 9,
-            "date_created": "12-20-2023"
+            "review": "This game sucks!",
+            "date_created": "2020-12-23"
             
         }
     }
