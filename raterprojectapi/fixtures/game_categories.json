@@ -1,6 +1,6 @@
 [
     {
-        "model": "raterprojectapi.gameCategory",
+        "model": "raterprojectapi.gamecategory",
         "pk": 1,
         "fields": {
             "categories": 1,
