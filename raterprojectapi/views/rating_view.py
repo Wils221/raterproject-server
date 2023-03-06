@@ -20,3 +20,51 @@ class RatingView(ViewSet):
         rating.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+    """Gamer rater game ratings & reviews view"""
+
+    def list(self, request):
+        """Handle GET requests to get all game ratings
+        Returns:
+            Response -- JSON serialized list of game ratings
+        """
+        rating = Rating.objects.all()
+        serializer = RatingSerializer(rating, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    def create(self, request):
+        """Handle POST operations
+
+        Returns
+            Response -- JSON serialized game instance
+        """
+
+        #getting the user that is logged in 
+        gamer = Gamer.objects.get(user=request.auth.user)
+        #retrieve game from database. make sure the game the user is trying to add with the new rating actually exists in database  
+        game = Game.objects.get(pk=request.data["game"])
+
+        # whichever keys are used on the request.data must match what the client is passing to the server.
+        rating = Rating.objects.create(
+            rating=request.data["rating"],
+            review=request.data["review"],
+            date_created=request.data["date_created"],
+            gamer=gamer, 
+            game =game
+        )
+        serializer = RatingSerializer(rating)
+        return Response(serializer.data)
+
+class RatingGamerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Gamer
+        fields = ( 'full_name', )
+
+class RatingSerializer(serializers.ModelSerializer):
+    """JSON serializer for game ratings"""
+
+    gamer = RatingGamerSerializer()
+
+    class Meta:
+        model = Rating
+        fields = ( 'id', 'gamer', 'game', 'rating', 'review', 'date_created',)
