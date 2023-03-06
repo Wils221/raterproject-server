@@ -23,6 +23,11 @@ class RatingView(ViewSet):
 
     """Gamer rater game ratings & reviews view"""
 
+    def retrieve(self, request, pk):
+        rating = Rating.objects.get(pk=pk)
+        serializer = RatingSerializer(rating)
+        return Response(serializer.data)
+
     def list(self, request):
         """Handle GET requests to get all game ratings
         Returns:
