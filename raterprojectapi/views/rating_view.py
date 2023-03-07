@@ -59,6 +59,15 @@ class RatingView(ViewSet):
         rating = Rating.objects.get(pk=pk)
         serializer = RatingSerializer(rating)
         return Response(serializer.data)
+    
+    def destroy(self, request, pk):
+        """Handle DELETE requests for a rating
+        Returns:
+            Response -- Empty body with 204 status code 
+        """
+        rating = Rating.objects.get(pk=pk)
+        rating.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 class RatingGamerSerializer(serializers.ModelSerializer):
     class Meta:
