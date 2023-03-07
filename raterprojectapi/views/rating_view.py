@@ -54,6 +54,11 @@ class RatingView(ViewSet):
         )
         serializer = RatingSerializer(rating)
         return Response(serializer.data)
+    
+    def retrieve(self, request, pk):
+        rating = Rating.objects.get(pk=pk)
+        serializer = RatingSerializer(rating)
+        return Response(serializer.data)
 
 class RatingGamerSerializer(serializers.ModelSerializer):
     class Meta:
