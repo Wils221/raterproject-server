@@ -22,9 +22,11 @@ from raterprojectapi.views import register_user, login_user
 from raterprojectapi.views import RatingView
 from raterprojectapi.views import GameView
 
+
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'ratings', RatingView, 'rating')
 router.register(r'games', GameView, 'game')
+
 
 urlpatterns = [
     path('register', register_user),
